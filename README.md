@@ -34,3 +34,4 @@ git add .
 git commit -m "comment"
 git push origin [name of branch]
 ```
+*Be mindful of which branch you're working on*
