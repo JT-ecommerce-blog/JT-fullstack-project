@@ -20,7 +20,7 @@ You can check what branch you're on by typing the following.
 ### Step 4
 You can go about working on the project like normal and when you're done you do the same steps to push it to github except when you run the push command. You type the name of the branch versus pushing to the master branch.
 
-`git add .`
-`git commit -m "comment"`
-`git push origin [name of branch]`
+`git add .`\
+`git commit -m "comment"`\
+`git push origin [name of branch]`\
 Be mindful of which branch you're working on
