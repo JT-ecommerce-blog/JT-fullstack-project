@@ -23,4 +23,5 @@ You can go about working on the project like normal and when you're done you do 
 `git add .`\
 `git commit -m "comment"`\
 `git push origin [name of branch]`\
-Be mindful of which branch you're working on
+
+Be mindful of which branch you're working on.
