@@ -1,0 +1,14 @@
+{
+        "atomKeymap.promptV3Features": true,
+        "editor.multiCursorModifier": "ctrlCmd",
+        "editor.formatOnPaste": true,
+        "window.zoomLevel": -1,
+        "editor.wordWrap": "on",
+        "workbench.statusBar.visible": true,
+        "editor.tabSize": 2,
+        "sublimeTextKeymap.promptV3Features": true,
+        "workbench.activityBar.visible": true,
+        "workbench.iconTheme": "material-icon-theme",
+        "workbench.colorTheme": "Nord",
+        "javascript.updateImportsOnFileMove.enabled": "always"
+    }
