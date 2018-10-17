@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 
 import Nav from './navigation/Nav.js';
 
-import '../css/App.css';
+import '../scss/App.scss';
 
 class App extends Component {
   render() {
