@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 class HomeBucketTwoContainer extends Component {
   render() {
     return (
-      <div>Test</div>
+      <div>homebucket2</div>
     )
   }
 }
