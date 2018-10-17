@@ -1,7 +1,7 @@
 # The Cource
 Full stack application that houses a coding blog and discussion board.
 
-# Github Process
+## Github Process
 ### Step 1
 Every day before you begin you want to pull the current master branch in case there were any changes made by others to the master.
 
