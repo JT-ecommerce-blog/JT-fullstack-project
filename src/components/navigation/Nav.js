@@ -5,25 +5,31 @@ import '../../css/Nav.css';
 
 const Home = () => (
   <div>
-    <h2>Home</h2>
+    <h3>The will be the homepage.</h3>
   </div>
 );
 
-const About = () => (
+const Blog = () => (
   <div>
-    <h2>About</h2>
+    <h3>This will be the blog page.</h3>
   </div>
 );
 
-const Topic = ({ match }) => (
+const Resource = ({ match }) => (
   <div>
     <h3>{match.params.topicId}</h3>
   </div>
 );
 
-const Topics = ({ match }) => (
+const Discussion= () => (
   <div>
-    <h2>Topics</h2>
+    <h3>This will be the discussion board.</h3>
+  </div>
+);
+
+const Resources = ({ match }) => (
+  <div>
+    <h2>This will be the resource page.</h2>
     <ul>
       <li>
         <Link to={`${match.url}/rendering`}>Rendering with React</Link>
@@ -36,35 +42,47 @@ const Topics = ({ match }) => (
       </li>
     </ul>
 
-    <Route path={`${match.path}/:topicId`} component={Topic} />
+    <Route path={`${match.path}/:topicId`} component={Resource} />
     <Route
       exact
       path={match.path}
-      render={() => <h3>Please select a topic.</h3>}
+      render={() => <h3>Resource list:</h3>}
     />
   </div>
 );
 
+
 const Nav = () => (
   <Router>
     <div>
-      <ul>
-        <li>
-          <Link to="/">Home</Link>
-        </li>
-        <li>
-          <Link to="/about">About</Link>
-        </li>
-        <li>
-          <Link to="/topics">Topics</Link>
-        </li>
-      </ul>
+      <nav className="navbar navbar-default">
+        <div className="container-fluid">
+          <div className="navbar-header">
+            <button type="button" className="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+              <span className="sr-only">Toggle navigation</span>
+              <span className="icon-bar"></span>
+              <span className="icon-bar"></span>
+              <span className="icon-bar"></span>
+            </button>
+            <Link className="navbar-brand" to="/">The Cource</Link>
+          </div>
 
-      <hr />
+          <div className="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul className="nav navbar-nav">
+                <li><Link to="blog">blog</Link></li>
+                <li><Link to="/resources">resources</Link></li>
+                <li><Link to="/discussion">discussion</Link></li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+
+      <br />
 
       <Route exact path="/" component={Home} />
-      <Route path="/about" component={About} />
-      <Route path="/topics" component={Topics} />
+      <Route path="/blog" component={Blog} />
+      <Route path="/resources" component={Resources} />
+      <Route path="/discussion" component={Discussion} />
     </div>
   </Router>
 );
