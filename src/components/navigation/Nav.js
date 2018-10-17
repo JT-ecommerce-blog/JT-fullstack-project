@@ -5,7 +5,7 @@ import '../../css/Nav.css';
 
 const Home = () => (
   <div>
-    <h3>The will be the homepage.</h3>
+    
   </div>
 );
 
