@@ -1,4 +1,4 @@
-# JT-fullstack-project
+# The Cource
 Full stack application that houses a coding blog and discussion board.
 
 <<<<<<< HEAD
