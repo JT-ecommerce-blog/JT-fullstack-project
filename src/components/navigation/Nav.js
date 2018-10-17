@@ -1,7 +1,9 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 
-import '../../css/Nav.css';
+import '../../scss/Nav.scss';
+
+const FontAwesome = require('react-fontawesome');
 
 const Home = () => (
   <div>
@@ -72,6 +74,7 @@ const Nav = () => (
                 <li><Link to="blog">blog</Link></li>
                 <li><Link to="/resources">resources</Link></li>
                 <li><Link to="/discussion">discussion</Link></li>
+                <li><Link to="/discussion"><FontAwesome name='user' /></Link></li>
             </ul>
           </div>
         </div>
