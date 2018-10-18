@@ -23,12 +23,6 @@ const Resource = ({ match }) => (
   </div>
 );
 
-const Discussion= () => (
-  <div>
-    <h3>This will be the discussion board.</h3>
-  </div>
-);
-
 const Resources = ({ match }) => (
   <div>
     <h2>This will be the resource page.</h2>
@@ -53,6 +47,20 @@ const Resources = ({ match }) => (
   </div>
 );
 
+const Discussion = () => (
+  <div>
+    <h3>This will be the discussion board.</h3>
+  </div>
+);
+
+const Account = () => (
+  <div>
+    <h3>This will be the account/profile page.</h3>
+  </div>
+);
+
+
+
 
 const Nav = () => (
   <Router>
@@ -74,7 +82,7 @@ const Nav = () => (
                 <li><Link to="blog">blog</Link></li>
                 <li><Link to="/resources">resources</Link></li>
                 <li><Link to="/discussion">discussion</Link></li>
-                <li><Link to="/discussion"><FontAwesome name='user' /></Link></li>
+                <li><Link to="/account"><FontAwesome name='user' /></Link></li>
             </ul>
           </div>
         </div>
@@ -82,10 +90,11 @@ const Nav = () => (
 
       <br />
 
-      <Route exact path="/" component={Home} />
-      <Route path="/blog" component={Blog} />
-      <Route path="/resources" component={Resources} />
-      <Route path="/discussion" component={Discussion} />
+      <Route exact path="/" component = {Home} />
+      <Route path="/blog" component = {Blog} />
+      <Route path="/resources" component = {Resources} />
+      <Route path="/discussion" component = {Discussion} />
+      <Route path="/account" component = {Account} />
     </div>
   </Router>
 );
