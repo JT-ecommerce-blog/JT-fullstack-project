@@ -1,4 +1,6 @@
-
+.nav-animation {
+  animation: fadeInDown 1.5s;
+}
 .navbar {
   border-radius: 0;
 }
@@ -32,10 +34,21 @@
       }
   }
 
+  .navbar-brand {
+    position: absolute;
+    bottom: 10px;
+    left: 40px;
+    padding: 0;
+
+    img {
+      height: 40px;
+    }
+  }
+
   .toggle-desktop {
     display: block;
     position: absolute;
-    right: 0;
+    right: 10px;
     bottom: 14px;
     border-color: transparent;
 
