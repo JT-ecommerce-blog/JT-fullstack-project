@@ -8,6 +8,11 @@
     background-color: $black;
     border-color: $black;
 
+  .container-fluid {
+    padding: 15px;
+    max-height: 80px;
+  }
+
   .navbar-nav {
     float: none;
     margin: 0;
@@ -15,13 +20,32 @@
 
       li>a {
         color: $white;
-        padding: 15px 30px;
-        margin: 0 2px;
-        transition: all .2s ease-in-out;
+        padding: 15px 5px;
+        margin: 0 25px;
+      }
+      li>a:focus {
+        color: $white;
       }
       li>a:hover {
         color: $pureWhite;
+        border-bottom: 1px solid $white;
       }
+  }
+
+  .toggle-desktop {
+    display: block;
+    position: absolute;
+    right: 0;
+    bottom: 14px;
+    border-color: transparent;
+
+    .icon-bar {
+      background-color: $white;
+    }
+  }
+  .toggle-desktop:hover,
+  .toggle-desktop:focus {
+    background-color: transparent;
   }
 
   li {
