@@ -1,13 +1,15 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 
-import '../../scss/Nav.scss';
+import HomePage from '../homepage/Homepage.js'
+
+import '../../scss/styles.scss';
 
 const FontAwesome = require('react-fontawesome');
 
 const Home = () => (
   <div>
-    
+    <HomePage />
   </div>
 );
 
@@ -23,30 +25,6 @@ const Resource = ({ match }) => (
   </div>
 );
 
-const Resources = ({ match }) => (
-  <div>
-    <h2>This will be the resource page.</h2>
-    <ul>
-      <li>
-        <Link to={`${match.url}/rendering`}>Rendering with React</Link>
-      </li>
-      <li>
-        <Link to={`${match.url}/components`}>Components</Link>
-      </li>
-      <li>
-        <Link to={`${match.url}/props-v-state`}>Props v. State</Link>
-      </li>
-    </ul>
-
-    <Route path={`${match.path}/:topicId`} component={Resource} />
-    <Route
-      exact
-      path={match.path}
-      render={() => <h3>Resource list:</h3>}
-    />
-  </div>
-);
-
 const Discussion = () => (
   <div>
     <h3>This will be the discussion board.</h3>
@@ -58,9 +36,6 @@ const Account = () => (
     <h3>This will be the account/profile page.</h3>
   </div>
 );
-
-
-
 
 const Nav = () => (
   <Router>
@@ -79,7 +54,7 @@ const Nav = () => (
 
           <div className="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul className="nav navbar-nav">
-                <li><Link to="blog">blog</Link></li>
+                <li><Link to="/blog">blog</Link></li>
                 <li><Link to="/resources">resources</Link></li>
                 <li><Link to="/discussion">discussion</Link></li>
                 <li><Link to="/account"><FontAwesome name='user' /></Link></li>
@@ -92,7 +67,7 @@ const Nav = () => (
 
       <Route exact path="/" component = {Home} />
       <Route path="/blog" component = {Blog} />
-      <Route path="/resources" component = {Resources} />
+      <Route path="/resources" component = {Resource} />
       <Route path="/discussion" component = {Discussion} />
       <Route path="/account" component = {Account} />
     </div>
