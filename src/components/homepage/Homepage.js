@@ -9,7 +9,7 @@ import ComingSoon from './comingSoon/ComingSoon.js';
 class HomePage extends Component {
   render() {
     return (
-      <div className="test">
+      <div className="homepage-container">
         <Hero />
         <FeaturedBlog />
         <HomeBucketOne />

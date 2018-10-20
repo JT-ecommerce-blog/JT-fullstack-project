@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
-import { BrowserRouter as Router, Route, Link } from "react-router-dom";
+import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
 
-import HomePage from '../homepage/Homepage.js';
+import HomePage from '.././homepage/HomePage.js';
 
 import '../../scss/styles.scss';
 
@@ -10,49 +10,57 @@ import logo from '../../assets/images/logo.png';
 
 const FontAwesome = require('react-fontawesome');
 
+// defining all of the components/content that will be rednered when each nav item is clicked/activated
 const Home = () => (
-  <div>
+  <div className="main-content">
     <HomePage />
   </div>
 );
 
 const Blog = () => (
-  <div>
+  <div className="main-content">
     <h3>This will be the blog page.</h3>
   </div>
 );
 
 const Resource = ({ match }) => (
-  <div>
-    <h3>{match.params.topicId}</h3>
+  <div className="main-content">
+    <h3>This will be the resource page</h3>
   </div>
 );
 
 const Discussion = () => (
-  <div>
+  <div className="main-content">
     <h3>This will be the discussion board.</h3>
   </div>
 );
 
 const Account = () => (
-  <div>
+  <div className="main-content">
     <h3>This will be the account/profile page.</h3>
   </div>
 );
 
 class Nav extends Component {
 
+  // setting the state of 
+  constructor(props) {
+    super(props);
+    this.state = {
+      desktopSubmenuIcon: false
+    }
+  }
+
   componentDidMount() {
     ReactDOM.findDOMNode(this).classList.add("nav-animation");
   }
 
-  removeAnimation = () => {
+  navAnimation = () => {
     let el = ReactDOM.findDOMNode(this);
     el.classList.remove("nav-animation");
     setTimeout (function () {
       el.classList.add("nav-animation");
-    }, 100);
-    
+    }, 50);
   }
 
   render(){
@@ -68,23 +76,30 @@ class Nav extends Component {
                   <span className="icon-bar"></span>
                   <span className="icon-bar"></span>
                 </button>
-                <Link className="navbar-brand" to="/"><img src={logo} alt="The Cource logo"/></Link>
+                <Link className="navbar-brand" onClick={this.navAnimation} to="/"><img src={logo} alt="The Cource logo"/></Link>
               </div>
 
               <div className="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul className="nav navbar-nav">
-                    <li><Link onClick={this.removeAnimation} to="/blog">blog</Link></li>
-                    <li><Link onClick={this.removeAnimation} to="/resources">resources</Link></li>
-                    <li><Link onClick={this.removeAnimation} to="/discussion">discussion</Link></li>
-                    <li><Link onClick={this.removeAnimation} to="/account"><FontAwesome name='user' /></Link></li>
+                    <li><Link onClick={this.navAnimation} to="/blog">blog</Link></li>
+                    <li><Link onClick={this.navAnimation} to="/resources">resources</Link></li>
+                    <li><Link onClick={this.navAnimation} to="/discussion">discussion</Link></li>
+                    <li><Link onClick={this.navAnimation} to="/account"><FontAwesome name='user' /></Link></li>
                 </ul>
               </div>
               <div className="desktop-hamburger">
-                <button type="button" className="navbar-toggle toggle-desktop collapsed">
-                  <span className="sr-only">Toggle navigation</span>
-                  <span className="icon-bar"></span>
-                  <span className="icon-bar"></span>
-                  <span className="icon-bar"></span>
+                <button type="button" className="navbar-toggle toggle-desktop collapsed" onClick={() => this.setState({desktopSubmenuIcon: !this.state.desktopSubmenuIcon})}>
+                { this.state.desktopSubmenuIcon 
+                  ? 
+                    <span><i class="fa fa-times"></i></span>
+                  :
+                    <span>
+                      <span className="sr-only">Toggle navigation</span>
+                      <span className="icon-bar"></span>
+                      <span className="icon-bar"></span>
+                      <span className="icon-bar"></span>
+                    </span>
+                }
                 </button>
               </div>
             </div>
