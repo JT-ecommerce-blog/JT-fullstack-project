@@ -2,7 +2,8 @@ import React, { Component } from 'react';
 
 class FeaturedBlogContainer extends Component {
   render() {
-    return <div id="homepage-bucketone">
+    return (
+      <div id="homepage-bucketone">
         <div className="homepage-bucketone-container">
           <div className="blog-box">
             <div className="blog-title">
@@ -31,7 +32,8 @@ class FeaturedBlogContainer extends Component {
             </div>
           </div>
         </div>
-      </div>;
+      </div>
+    )
   }
 }
 

@@ -37,8 +37,6 @@
   }
 }
 #homepage-bucketone {
-
-
   .homepage-bucketone-container {
     display: flex;
     flex-direction: row;
@@ -95,9 +93,57 @@
           width:100%;
           transition: all .5s;
         }
-
       }
     }
   }
+}
+
+#home-bucket-one {
+  padding: 40px 100px;
+  text-align: left;
+
+  .img-left {
+    display: inline-block;
+    width: 50%;
+  }
+  .text-right {
+    display: inline-block;
+    width: 50%;
+    text-align: left;
+
+    h1 {
+
+      &:after {
+        content:'';
+        display: block;
+        width: 15%;
+        margin-top: 5px;
+        border-bottom: 1px solid $courceLightOrange;
+      }
+    }
+  }
+}
+
+#home-bucket-two {
+  padding: 40px 100px;
   
+  .img-right {
+    display: inline-block;
+    width: 50%;
+  }
+  .text-left {
+    display: inline-block;
+    width: 50%;
+    text-align: left;
+  }
+  h1 {
+
+      &:after {
+        content:'';
+        display: block;
+        width: 15%;
+        margin-top: 5px;
+        border-bottom: 1px solid $courceLightOrange;
+      }
+    }
 }
