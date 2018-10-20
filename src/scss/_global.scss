@@ -5,3 +5,23 @@
 body {
   font-family: 'Avenir', sans-serif;
 }
+p {
+  line-height: 26px;
+  margin: 20px 0;
+}
+.button {
+  border: 1px solid #F3A183;
+  width: 185px;
+  display: block;
+  padding: 10px;
+  text-align: center;
+  border-radius: 2px;
+  color: #F3A183;
+  font-weight: bold;
+
+  &:hover {
+    text-decoration: none;
+    color: #fff;
+    background-color: #F3A183;
+  }
+}
