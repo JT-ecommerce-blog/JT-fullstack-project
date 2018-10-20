@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
 
 class Hero extends Component {
   render() {
@@ -7,7 +8,7 @@ class Hero extends Component {
         <div className="hero-content">
           <h1>Start Your Journey</h1>
           <p>Learn how we became creatives and how we both transitioned from one career into Development</p>
-          <button>Read Our Story</button>
+          <Link to="/about-us">Read Our Story</Link>
         </div>
       </div>
     )
