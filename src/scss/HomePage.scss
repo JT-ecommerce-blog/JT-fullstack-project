@@ -1,5 +1,5 @@
 #homepage-hero-container {
-  background-image: url(/static/media/hero-image.b47652db.jpg);
+  background-image: url('../assets/images/hero-image.jpg');
   height: 100vh;
   max-height: 800px;
   background-repeat: no-repeat;
@@ -35,4 +35,69 @@
     font-weight: 400;
     padding: 10px 40px;
   }
+}
+#homepage-bucketone {
+
+
+  .homepage-bucketone-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    text-align: center;
+    background-color: transparent;
+    position: relative;
+    top: -45px;
+
+    .blog-box {
+      width: 30%;
+      height: 300px;
+      position: relative;
+      overflow: hidden;
+      background-color: #fff;
+      -webkit-box-shadow: 10px 10px 3px -9px rgba(0,0,0,0.5);
+      -moz-box-shadow: 10px 10px 3px -9px rgba(0,0,0,0.5);
+      box-shadow: 10px 10px 3px -9px rgba(0,0,0,0.5);
+    }
+
+    .blog-title {
+      padding: 10px 0;
+    }
+
+    .blog-image {
+      background-color: $black;
+      height: 100%;
+
+      a {
+        position: absolute;
+        bottom: 30px;
+        right: 0;
+        background-color: white;
+        width: 120px;
+        padding: 5px 0;
+        color: $black;
+        z-index: 10;
+        text-decoration: none;
+
+        &:after {
+          content: "";
+          display: inline-block;
+          position: absolute;
+          width: 40px;
+          height: 30px;
+          right:0;
+          bottom:0;
+          z-index: -1;
+          background-color: $courceDarkOrange;
+          transition: all .5s;
+        }
+
+        &:hover:after {
+          width:100%;
+          transition: all .5s;
+        }
+
+      }
+    }
+  }
+  
 }
