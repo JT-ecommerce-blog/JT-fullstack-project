@@ -1,72 +1,99 @@
 .nav-animation {
-  animation: fadeInDown 1.5s;
-}
-.navbar {
-  border-radius: 0;
+
+  .navbar {
+    animation: fadeInDown 1.5s;
+  }
 }
 
-.navbar-default {
-    background: $black;
-    background-color: $black;
-    border-color: $black;
+#main-nav-container {
 
-  .container-fluid {
-    padding: 15px;
-    max-height: 80px;
+  .navbar {
+    border-radius: 0;
+    margin-bottom: 0;
   }
 
-  .navbar-nav {
-    float: none;
-    margin: 0;
-    text-align: center;
+  .navbar-default {
+    background: transparent;
+    background-color: transparent;
+    border-color: transparent;
+    position: absolute;
+    width: 100%;
+    z-index: 100;
+
+    .container-fluid {
+      padding: 15px;
+      max-height: 80px;
+
+      i.fa.fa-times {
+        color: #e7e7e7;
+        font-size: 19px;
+        position: relative;
+        top: 5px;
+        right: 3px;
+      }
+    }
+
+    .navbar-nav {
+      float: none;
+      margin: 0;
+      text-align: center;
 
       li>a {
         color: $white;
         padding: 15px 5px;
         margin: 0 25px;
       }
+
       li>a:focus {
         color: $white;
       }
+
       li>a:hover {
         color: $pureWhite;
         border-bottom: 1px solid $white;
       }
-  }
+    }
 
-  .navbar-brand {
-    position: absolute;
-    bottom: 10px;
-    left: 40px;
-    padding: 0;
+    .navbar-brand {
+      position: absolute;
+      bottom: 10px;
+      left: 40px;
+      padding: 0;
 
-    img {
-      height: 40px;
+      img {
+        height: 40px;
+      }
+    }
+
+    .toggle-desktop {
+      display: block;
+      position: absolute;
+      right: 10px;
+      bottom: 14px;
+      border-color: transparent;
+
+      .icon-bar {
+        background-color: $white;
+      }
+    }
+
+    .toggle-desktop:hover,
+    .toggle-desktop:focus {
+      background-color: transparent;
+    }
+
+    li {
+      float: none;
+      display: inline-block;
+    }
+
+    .fa-user {
+      color: $courceDarkOrange;
     }
   }
 
-  .toggle-desktop {
-    display: block;
-    position: absolute;
-    right: 10px;
-    bottom: 14px;
-    border-color: transparent;
-
-    .icon-bar {
-      background-color: $white;
-    }
-  }
-  .toggle-desktop:hover,
-  .toggle-desktop:focus {
-    background-color: transparent;
+  .main-content {
+    animation: fadeIn 3s;
   }
 
-  li {
-    float: none;
-    display: inline-block;
-  }
-
-  .fa-user {
-    color: $courceDarkOrange;
-  }
 }
