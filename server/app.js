@@ -1,13 +1,28 @@
-let express = require('express');
-let app = express();
-const path = require('path');
+const express = require('express');
+const { json } = require("body-parser");
 
-//route for the homepage
-app.get("/", (req, res) => {
-  res.sendFile(path.join(__dirname + '/../public/index.html'));
-  console.log(__dirname);
+const app = express();
+// const path = require("path");
+
+
+app.use(json());
+
+app.get('/api/customers', (req, res) => {
+  const customers = [
+    { id: 1, firstName: 'John', lastName: 'Doe' },
+    { id: 2, firstName: 'Jeff', lastName: 'Horner' },
+    { id: 3, firstName: 'Terry', lastName: 'Dinh' }
+  ];
+
+  res.json(customers)
 });
+//route for the homepage
+// app.get("/", (req, res) => {
+//   res.sendFile(path.join(__dirname + '/../public/index.html'));
+//   console.log(__dirname);
+// });
+const port = 3001;
 
-app.listen(3001, () => {
-  console.log('Server has started...');
+app.listen(port, () => {
+  console.log(`Server started on ${port}`);
 });

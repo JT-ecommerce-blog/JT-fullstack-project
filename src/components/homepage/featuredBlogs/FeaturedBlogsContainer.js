@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 
-import blogImageOne from '/Users/jeffhorner/Development/Projects/the-cource/JT-fullstack-project/src/assets/images/blogImageOne.png';
-import blogImageTwo from '/Users/jeffhorner/Development/Projects/the-cource/JT-fullstack-project/src/assets/images/blogImageTwo.png';
-import blogImageThree from '/Users/jeffhorner/Development/Projects/the-cource/JT-fullstack-project/src/assets/images/blogImageThree.png';
+import blogImageOne from "../../../assets/images/blogImageOne.png";
+import blogImageTwo from "../../../assets/images/blogImageTwo.png";
+import blogImageThree from "../../../assets/images/blogImageThree.png";
 
 class FeaturedBlogContainer extends Component {
   render() {

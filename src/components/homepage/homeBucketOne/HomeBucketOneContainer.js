@@ -1,8 +1,20 @@
 import React, { Component } from 'react';
 
-import bucketOneImage from '/Users/jeffhorner/Development/Projects/the-cource/JT-fullstack-project/src/assets/images/read-learn-more.png';
+import bucketOneImage from "../../../assets/images/read-learn-more.png";
 
 class HomeBucketOneContainer extends Component {
+  constructor () {
+    super();
+    this.state = {
+      customers: []
+    }
+  }
+
+  componentDidMount() {
+    fetch('/api/customers')
+    .then(res => res.json())
+    .then(customers => this.setState({customers}, () => console.log('Customers fetched..', customers)));
+  }
   render() {
     return (
       <div id="home-bucket-one">
