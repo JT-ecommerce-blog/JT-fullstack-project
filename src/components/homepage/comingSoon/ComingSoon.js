@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 
-import accountCreation from '/Users/jeffhorner/Development/Projects/the-cource/JT-fullstack-project/src/assets/images/account-creation.png';
-import store from '/Users/jeffhorner/Development/Projects/the-cource/JT-fullstack-project/src/assets/images/store.png';
+import accountCreation from '../../../assets/images/account-creation.png';
+import store from "../../../assets/images/store.png";
 
 class ComingSoon extends Component {
   render() {

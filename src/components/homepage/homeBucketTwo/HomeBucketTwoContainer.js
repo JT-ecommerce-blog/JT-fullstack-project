@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-import bucketTwoImage from '/Users/jeffhorner/Development/Projects/the-cource/JT-fullstack-project/src/assets/images/how-to-get-started.png';
+import bucketTwoImage from "../../../assets/images/how-to-get-started.png";
 
 class HomeBucketTwoContainer extends Component {
   render() {
