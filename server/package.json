@@ -1,0 +1,22 @@
+{
+  "name": "thecource",
+  "version": "1.0.0",
+  "description": "backend set up for The Cource web application",
+  "main": "app.js",
+  "scripts": {
+    "start": "nodemon ./bin/www"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JT-ecommerce-blog/the-cource.git"
+  },
+  "author": "Jeff Horner & Terry Dinh",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JT-ecommerce-blog/the-cource/issues"
+  },
+  "homepage": "https://github.com/JT-ecommerce-blog/the-cource#readme",
+  "dependencies": {
+    "express": "^4.16.4"
+  }
+}
