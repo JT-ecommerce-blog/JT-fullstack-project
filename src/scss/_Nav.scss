@@ -1,7 +1,7 @@
 .nav-animation {
 
   .navbar {
-    animation: fadeInDown 1.25s;
+    animation: fadeInDown 1.5s;
   }
 }
 
@@ -21,6 +21,16 @@
     .container-fluid {
       padding: 15px;
       max-height: 80px;
+
+      span.icon-bar.short {
+        position: relative;
+        left: 12px;
+        width: 20px;
+      }
+
+      span.icon-bar.long {
+        width: 32px;
+      }
 
       i.fa.fa-times {
         color: #e7e7e7;
