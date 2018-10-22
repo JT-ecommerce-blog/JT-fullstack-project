@@ -95,9 +95,9 @@ class Nav extends Component {
                   :
                     <span>
                       <span className="sr-only">Toggle navigation</span>
-                      <span className="icon-bar"></span>
-                      <span className="icon-bar"></span>
-                      <span className="icon-bar"></span>
+                      <span className="icon-bar short"></span>
+                      <span className="icon-bar long"></span>
+                      <span className="icon-bar short"></span>
                     </span>
                 }
                 </button>

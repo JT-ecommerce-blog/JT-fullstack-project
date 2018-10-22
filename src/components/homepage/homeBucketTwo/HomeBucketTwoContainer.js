@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 
+import bucketTwoImage from '/Users/jeffhorner/Development/Projects/the-cource/JT-fullstack-project/src/assets/images/how-to-get-started.png';
+
 class HomeBucketTwoContainer extends Component {
   render() {
     return (
@@ -18,9 +20,11 @@ class HomeBucketTwoContainer extends Component {
             non veritatis delectus, voluptatem autem reiciendis! Praesentium
             laudantium vero dolor natus! Asperiores, deleniti vel!
           </p>
-          <a href="#" className="button">Helpful Resources</a>
+          <a href="/resources" className="button">Helpful Resources</a>
         </div>
-        <div className="img-right" />
+        <div className="img-right">
+          <img src={bucketTwoImage} alt="How To Get Started" />
+        </div>
       </div>
     )
   }
