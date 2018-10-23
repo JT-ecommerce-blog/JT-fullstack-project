@@ -201,7 +201,9 @@
   }
 
   .inner-buckets {
-    margin: 50px 0;
+    width: 100%;
+    max-width: 1200px;
+    margin: 50px auto;
 
     .bucket {
       display: inline-block;
