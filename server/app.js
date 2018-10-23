@@ -17,11 +17,11 @@ app.get('/api/customers', (req, res) => {
 
   res.json(customers)
 });
-//route for the homepage
-// app.get("/", (req, res) => {
-//   res.sendFile(path.join(__dirname + '/../public/index.html'));
-//   console.log(__dirname);
-// });
+// route for the homepage
+app.get("/", (req, res) => {
+  // res.sendFile(path.join(__dirname + '/../public/index.html'));
+  console.log('homepage was requested');
+});
 const port = 3001;
 
 app.listen(port, () => {
