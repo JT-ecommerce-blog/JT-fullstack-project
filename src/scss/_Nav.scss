@@ -6,6 +6,7 @@
 }
 
 #main-nav-container {
+  background-color: #262626;
 
   .navbar {
     border-radius: 0;
@@ -24,6 +25,12 @@
     .container-fluid {
       padding: 15px;
       max-height: 80px;
+
+      .desktop-hamburger {
+        span {
+          cursor: pointer;
+        }
+      }
 
       span.icon-bar.short {
         position: relative;
@@ -80,8 +87,10 @@
       display: block;
       position: absolute;
       right: 10px;
-      bottom: 14px;
+      bottom: 35px;
       border-color: transparent;
+      padding: 0;
+      margin: 0;
 
       .icon-bar {
         background-color: $white;
