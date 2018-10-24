@@ -5,7 +5,9 @@ const cors = require("cors");
 const app = express();
 // const path = require("path");
 
+// illeviates any browser cors issue
 app.use(cors());
+// puts the db info into a json
 app.use(json());
 
 app.get('/api/customers', (req, res) => {

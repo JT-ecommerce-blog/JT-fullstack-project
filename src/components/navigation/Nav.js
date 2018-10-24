@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom';
 import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
 
 import HomePage from '.././homepage/Homepage.js';
+import SubNav from './SubNav.js';
 
 import '../../scss/styles.scss';
 
@@ -43,14 +44,6 @@ const Account = () => (
 
 class Nav extends Component {
 
-  // setting the state of 
-  constructor(props) {
-    super(props);
-    this.state = {
-      desktopSubmenuIcon: false
-    }
-  }
-
   componentDidMount() {
     ReactDOM.findDOMNode(this).classList.add("nav-animation");
   }
@@ -88,19 +81,7 @@ class Nav extends Component {
                 </ul>
               </div>
               <div className="desktop-hamburger">
-                <button type="button" className="navbar-toggle toggle-desktop collapsed" onClick={() => this.setState({desktopSubmenuIcon: !this.state.desktopSubmenuIcon})}>
-                { this.state.desktopSubmenuIcon 
-                  ? 
-                    <span><i class="fa fa-times"></i></span>
-                  :
-                    <span>
-                      <span className="sr-only">Toggle navigation</span>
-                      <span className="icon-bar short"></span>
-                      <span className="icon-bar long"></span>
-                      <span className="icon-bar short"></span>
-                    </span>
-                }
-                </button>
+                <SubNav />
               </div>
             </div>
           </nav>
