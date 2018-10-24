@@ -1,8 +1,14 @@
 const express = require('express');
 const { json } = require("body-parser");
 const cors = require("cors");
-const mongo = require("mongodb");
+const MongoClient = require("mongodb").MongoClient;
 
+
+MongoClient.connect("mongodb://localhost:27017/exampleDb", function (err, db) {
+  if (!err) {
+    console.log("We are connected");
+  }
+});
 
 const app = express();
 // const path = require("path");
