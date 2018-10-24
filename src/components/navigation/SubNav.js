@@ -12,16 +12,17 @@ class SubNav extends Component {
     return (
       <span className="navbar-toggle toggle-desktop collapsed">
         <Popup
-          trigger={ 
-          <button className="button">       
-            <span className="icon-bar short"></span>
-            <span className="icon-bar long"></span>
-            <span className="icon-bar short"></span>
-          </button>}
+          trigger={        
+            <span>
+              <span className="icon-bar short"></span>
+              <span className="icon-bar long"></span>
+              <span className="icon-bar short"></span>
+            </span>
+          }
           modal
           closeOnDocumentClick
         >
-          <span> Modal content </span>
+          <span><i className="fa fa-times-circle" /></span>
         </Popup>
       </span>
     );
