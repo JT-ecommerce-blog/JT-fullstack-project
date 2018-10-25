@@ -15,7 +15,7 @@ MongoClient.connect(url, function (err, client) {
   assert.equal(null, err);
   console.log("Connected successfully to server");
 
-  const db = client.db(dbName);
+  // const db = client.db(dbName);
 
   client.close();
 });
@@ -37,11 +37,7 @@ app.get('/api/customers', (req, res) => {
 
   res.json(customers)
 });
-// route for the homepage
-app.get("/", (req, res) => {
-  // res.sendFile(path.join(__dirname + '/../public/index.html'));
-  console.log('homepage was requested');
-});
+
 const port = 3001;
 
 app.listen(port, () => {
