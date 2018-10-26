@@ -1,0 +1,13 @@
+.form {
+  display: inline;
+  margin: 0 10px;
+
+  label {
+    color: $pureWhite;
+  }
+
+  button {
+    background: $courceLightOrange;
+    padding: 2px 20px;
+  }
+}
