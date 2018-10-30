@@ -13,12 +13,12 @@ class HomePage extends Component {
     return (
       <div className="homepage-container">
         <SubNav />
-        <TestForm />
         <Hero />
         <FeaturedBlog />
         <HomeBucketOne />
         <HomeBucketTwo />
         <ComingSoon />
+        <TestForm />
       </div>
     );
   }

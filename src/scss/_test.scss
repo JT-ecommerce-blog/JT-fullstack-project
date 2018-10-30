@@ -1,13 +1,19 @@
-.form {
-  display: inline;
-  margin: 0 10px;
+form {
+  text-align: center;
+  height: 100px;
+  padding-top: 30px;
 
-  label {
-    color: $pureWhite;
-  }
+  .form {
+    display: inline;
+    margin: 0 10px;
 
-  button {
-    background: $courceLightOrange;
-    padding: 2px 20px;
+    label {
+      color: $black;
+    }
+
+    button {
+      background: $courceLightOrange;
+      padding: 2px 20px;
+    }
   }
 }
