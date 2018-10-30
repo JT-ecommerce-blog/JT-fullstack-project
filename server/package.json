@@ -2,7 +2,7 @@
   "name": "thecource",
   "version": "1.0.0",
   "description": "backend set up for The Cource web application",
-  "main": "app.js",
+  "main": "server.js",
   "scripts": {
     "start": "nodemon ./bin/www"
   },
@@ -17,8 +17,11 @@
   },
   "homepage": "https://github.com/JT-ecommerce-blog/the-cource#readme",
   "dependencies": {
+    "body-parser": "^1.18.3",
+    "concurrently": "^4.0.1",
     "cors": "^2.8.4",
     "express": "^4.16.4",
-    "mongodb": "^3.1.8"
+    "mongodb": "^3.1.8",
+    "mongoose": "^5.3.7"
   }
 }
