@@ -4,8 +4,8 @@ class TestForm extends Component {
   constructor(props) {
     super(props)
     this.state = {
-      content: '',
-      author: ''
+      author: '',
+      comment: ''
     }
     this.onInputChange = this.onInputChange.bind(this);
   }
@@ -13,7 +13,8 @@ class TestForm extends Component {
   onInputChange(event) {
     this.setState ({
       [event.target.name]: event.target.value
-    })
+    });
+    console.log(this.state.author);
   }
 
   render() {
@@ -28,7 +29,7 @@ class TestForm extends Component {
           <input value={this.state.comment} onChange={this.onInputChange} type="text" id="comment" name="comment"/>
         </div>
         <div className="form">
-          <button type="submit">New Data</button>
+          <button type="submit" value="submit">New Data</button>
         </div>
       </form>
     );

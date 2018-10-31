@@ -18,6 +18,7 @@ router.get('/', (req, res) => {
 // @desc Create A Post
 // @access Public
 router.post('/', (req, res) => {
+  console.log(req.body)
   const newPost = new Post({
     author: req.body.author,
     comment: req.body.comment
@@ -27,6 +28,7 @@ router.post('/', (req, res) => {
     .catch(err => {
       console.log(err);
     });
+  res.redirect('/');
 });
 
 // @route DELETE api/posts/:id - / represents this path

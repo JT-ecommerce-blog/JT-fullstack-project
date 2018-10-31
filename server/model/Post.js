@@ -8,12 +8,10 @@ const PostSchema = new Schema({
     default: Date.now
   }, 
   author: {
-    type: String,
-    required: true
+    type: String
   },
   comment: {
-    type: String,
-    required: true
+    type: String
   }
 });
 
