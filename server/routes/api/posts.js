@@ -17,7 +17,7 @@ router.get('/', (req, res) => {
 // @route POST api/posts - / represents this path
 // @desc Create A Post
 // @access Public
-router.post('/', (req, res) => {
+router.post('/', (req, res, next) => {
   console.log(req.body)
   const newPost = new Post({
     author: req.body.author,
@@ -28,6 +28,7 @@ router.post('/', (req, res) => {
     .catch(err => {
       console.log(err);
     });
+    // Going to need to remove the .catch to remove newPost.save()
   res.redirect('/');
 });
 
