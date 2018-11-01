@@ -17,22 +17,36 @@ class TestForm extends Component {
     console.log(this.state.author);
   }
 
+  submitForm = async e => {
+    e.preventDefault(); //may not need this
+    const response = await fetch('/api/posts', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({ 
+        comment: this.state.comment,
+        author: this.state.author
+      }),
+    });
+  }
+
   render() {
-    return(
-      <form action="/api/posts" method="post">
+    return <form>
         <div className="form">
           <label htmlFor="author">Author</label>
-          <input value={this.state.author} onChange={this.onInputChange} type="text" id="author" name="author"/>
+          <input value={this.state.author} onChange={this.onInputChange} type="text" id="author" name="author" />
         </div>
         <div className="form">
           <label htmlFor="comment">Comment</label>
-          <input value={this.state.comment} onChange={this.onInputChange} type="text" id="comment" name="comment"/>
+        <input value={this.state.comment} onChange={this.onInputChange} type="text" id="comment" name="comment" />
         </div>
         <div className="form">
-          <button type="submit" value="submit">New Data</button>
+        <button type="submit" value="submit" onClick={this.submitForm}>
+            New Data
+          </button>
         </div>
-      </form>
-    );
+      </form>;
   }
 }
 
