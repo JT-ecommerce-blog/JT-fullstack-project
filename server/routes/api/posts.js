@@ -24,10 +24,10 @@ router.post('/', (req, res, next) => {
     comment: req.body.comment
   });
   newPost.save()
-    .then(post => res.json(post))
-    .catch(err => {
-      console.log(err);
-    });
+    // .then(post => res.json(post))
+    // .catch(err => {
+    //   console.log(err);
+    // });
     // Going to need to remove the .catch to remove newPost.save()
   res.redirect('/');
 });
