@@ -17,8 +17,9 @@ class TestForm extends Component {
     console.log(this.state.author);
   }
 
+  //posting to database
   submitForm = async e => {
-    e.preventDefault(); //may not need this
+    e.preventDefault();
     const response = await fetch('/api/posts', {
       method: 'POST',
       headers: {
