@@ -1,7 +1,7 @@
 # The Cource
 Full stack application that houses a coding blog and discussion board.
 
-## Initial Github Process
+## Initial Github process
 
 ### Step 1
 First thing first, fork the repo to your github account. 
@@ -39,7 +39,7 @@ npm i
 
 Your all set!
 
-## Daily Github Process After the Repo is on Your Local Machine
+## Daily Github process after the repo is on your local machine
 
 ### Step 1
 Every day before you begin you'll need to pull the current master branch in case there were any changes made by others to the master.
