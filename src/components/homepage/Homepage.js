@@ -18,7 +18,6 @@ class HomePage extends Component {
         <HomeBucketOne />
         <HomeBucketTwo />
         <ComingSoon />
-        <TestForm />
       </div>
     );
   }
