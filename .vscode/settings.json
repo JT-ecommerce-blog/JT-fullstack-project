@@ -10,5 +10,6 @@
         "workbench.activityBar.visible": true,
         "workbench.iconTheme": "material-icon-theme",
         "workbench.colorTheme": "Nord",
-        "javascript.updateImportsOnFileMove.enabled": "always"
-    }
+    "javascript.updateImportsOnFileMove.enabled": "always",
+    "git.ignoreLimitWarning": true
+}
