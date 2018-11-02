@@ -14,13 +14,12 @@ class TestForm extends Component {
     this.setState ({
       [event.target.name]: event.target.value
     });
-    console.log(this.state.author);
   }
 
   //posting to database
   submitForm = async e => {
     e.preventDefault();
-    const response = await fetch('/api/posts', {
+    await fetch('/api/posts', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
