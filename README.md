@@ -1,37 +1,90 @@
 # The Cource
 Full stack application that houses a coding blog and discussion board.
 
-## Github Process
+## Initial Github Process
+
 ### Step 1
-Every day before you begin you want to pull the current master branch in case there were any changes made by others to the master.
+First thing first, fork the repo to your github account. 
+
+### Step 2
+Now, you'll want to clone the repo to your local machine.
+
+```html
+git clone REPO_URL
+```
+
+### Step 3
+You'll want to create a branch and work on this branch when making any changes.
+
+```html
+git branch [name of branch]
+git checkout [name of branch]
+```
+You're now on your created branch and ready to work.
+
+### Step 4
+Once you've cloned the repo locally and created your branch, you'll want to install node modules both globally in the root as well as in the server folder.
+
+While in the root folder:
+```html
+npm i
+```
+
+now, navigate to the server folder and install the node modules there.
+
+```html
+cd server/
+npm i
+```
+
+Your all set!
+
+## Daily Github Process After the Repo is on Your Local Machine
+
+### Step 1
+Every day before you begin you'll need to pull the current master branch in case there were any changes made by others to the master.
+
+Make sure you navigate to the master first (if you're not there already)
+
+```html
+git checkout master
+
+```
+Now make the pull request.
 
 ```html
 git pull origin master
 ```
-### Step 2
-After pulling the master you will have the most up-to-date version of the master, now you want to create a branch so any changes you make won't affect the master branch.
+
+Navigate back to your branch and merge the master branch to your created branch. *If you have created a branch, refer to the Initial Github process steps above.*
+
+```html 
+git checkout [name of branch]
+git merge master
+```
+
+### Step 2 
+Once you've cloned the repo locally and created your branch, you'll want to install node modules both globally in the root as well as in the server folder.
+
+While in the root folder:
+```html
+npm i
+```
+
+now, navigate to the server folder and install the node modules there.
 
 ```html
-git branch [name of branch]
+cd server/
+npm i
 ```
+
+Your all set!
 
 ### Step 3
-Next you want to switch to that branch so that you're not working on the master.
-
-```html
-git checkout [name of branch]
-```
-You can check what branch you're on by typing the following.
-
-```html
-git branch
-```
-### Step 4
-You can go about working on the project like normal and when you're done you do the same steps to push it to github except when you run the push command. You type the name of the branch versus pushing to the master branch.
+You can go about working on the project like normal and when you're done and ready to push your changes, here are the commands to follow. Again, make sure you're making any changes to your created branch and not the master branch. 
 
 ```html
 git add .
 git commit -m "comment"
 git push origin [name of branch]
 ```
-*Be mindful of which branch you're working on*
