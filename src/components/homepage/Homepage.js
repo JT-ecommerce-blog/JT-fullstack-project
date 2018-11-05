@@ -1,12 +1,11 @@
 import React, { Component } from "react";
 
-import SubNav from '../navigation/SubNav.js';
-import TestForm from '../test/TestForm.js';
-import Hero from './hero/Hero.js';
-import FeaturedBlog from './featuredBlogs/FeaturedBlogsContainer.js';
-import HomeBucketOne from './homeBucketOne/HomeBucketOneContainer.js';
-import HomeBucketTwo from './homeBucketTwo/HomeBucketTwoContainer.js';
-import ComingSoon from './comingSoon/ComingSoon.js';
+import SubNav from '../navigation/SubNav';
+import Hero from './hero/Hero';
+import FeaturedBlog from './featuredBlogs/FeaturedBlogsContainer';
+import HomeBucketOne from './homeBucketOne/HomeBucketOneContainer';
+import HomeBucketTwo from './homeBucketTwo/HomeBucketTwoContainer';
+import ComingSoon from './comingSoon/ComingSoon';
 
 class HomePage extends Component {
   render() {

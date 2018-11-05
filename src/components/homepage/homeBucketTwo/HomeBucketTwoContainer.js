@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
+
 
 import bucketTwoImage from "../../../assets/images/how-to-get-started.png";
 
@@ -20,7 +22,7 @@ class HomeBucketTwoContainer extends Component {
             non veritatis delectus, voluptatem autem reiciendis! Praesentium
             laudantium vero dolor natus! Asperiores, deleniti vel!
           </p>
-          <a href="/resources" className="button">Helpful Resources</a>
+          <Link to="/resources" className="button">Helpful Resources</Link>
         </div>
         <div className="img-right">
           <img src={bucketTwoImage} alt="How To Get Started" />
