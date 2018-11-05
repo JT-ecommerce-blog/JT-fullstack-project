@@ -3,6 +3,8 @@ import ReactDOM from 'react-dom';
 import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
 
 import HomePage from '.././homepage/Homepage.js';
+import AboutUsPage from '.././aboutus/AboutUsPage.js';
+
 import SubNav from './SubNav.js';
 
 import '../../scss/styles.scss';
@@ -39,6 +41,12 @@ const Discussion = () => (
 const Account = () => (
   <div className="main-content">
     <h3>This will be the account/profile page.</h3>
+  </div>
+);
+
+const AboutUs = () => (
+  <div className="main-content">
+    <AboutUsPage />
   </div>
 );
 
@@ -91,6 +99,7 @@ class Nav extends Component {
           <Route path="/resources" component = {Resource} />
           <Route path="/discussion" component = {Discussion} />
           <Route path="/account" component = {Account} />
+          <Route path="/about-us" component = {AboutUs} />
         </div>
       </Router>
     );

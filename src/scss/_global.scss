@@ -6,6 +6,8 @@ body {
   font-family: 'Avenir', sans-serif;
 }
 .main-content {
+  background: $pureWhite;
+  background-color: $pureWhite;
   animation: fadeIn 1.5s;
 }
 h1, h2, h3, h4, h5, h6 {
@@ -17,6 +19,21 @@ p {
 }
 img {
   vertical-align: inherit;
+}
+.main-button {
+  width: 185px;
+  background-image: linear-gradient(to right, $courceDarkOrange, $courceLightOrange);
+  border-radius: 3px;
+  color: $pureWhite;
+  font-weight: 400;
+  padding: 10px;
+  text-align: center;
+
+  &:hover {
+    color: $pureWhite;
+    text-decoration: none;
+    background-image: linear-gradient(to right, $courceLightOrange, $courceDarkOrange);
+  }
 }
 .button {
   border: 1px solid $courceDarkOrange;

@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
+
 
 import accountCreation from '../../../assets/images/account-creation.png';
 import store from "../../../assets/images/store.png";
@@ -23,7 +25,7 @@ class ComingSoon extends Component {
             <img src={store} alt="Online Store coming soon" />
           </div>
         </div>
-        <a href="/contact">Have A Question?</a>
+        <Link to="/contact">Have A Question?</Link>
       </div>;
   }
 }
