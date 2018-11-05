@@ -1,4 +1,4 @@
 # dependencies
-+ .env
+*.env
 /node_modules
 /server/node_modules
