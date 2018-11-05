@@ -17,7 +17,7 @@ app.use(cors());
 app.use(bodyParser.json());
 
 // db config/url
-const db = require('./config/keys').mongoURI;
+const db = process.env.DB_CONN;
 
 // Connect to mongoDB
 mongoose.connect(db, { useNewUrlParser: true } )
