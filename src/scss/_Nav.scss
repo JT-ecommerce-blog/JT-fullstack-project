@@ -24,8 +24,8 @@
     margin-bottom: -20px;
 
     .container-fluid {
-      padding: 15px;
-      max-height: 80px;
+      padding: 10px;
+      max-height: 50px;
 
       .desktop-hamburger {
         span {
@@ -59,7 +59,7 @@
 
       li>a {
         color: $white;
-        padding: 15px 5px;
+        padding: 5px;
         margin: 0 25px;
       }
 
@@ -75,7 +75,7 @@
 
     .navbar-brand {
       position: absolute;
-      bottom: 10px;
+      top: 3px;
       left: 40px;
       padding: 0;
 
@@ -87,8 +87,8 @@
     .toggle-desktop {
       display: block;
       position: absolute;
-      right: 24px;
-      bottom: 35px;
+      right: 22px;
+      bottom: 17px;
       border-color: transparent;
       padding: 0;
       margin: 0;
