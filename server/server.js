@@ -4,8 +4,7 @@ const express = require('express');
 const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
 const cors = require('cors');
-
-const posts = require('./routes/api/posts');
+const routes = require('./routes/api/blogs');
 
 const app = express();
 
@@ -28,7 +27,7 @@ mongoose.connect(db, { useNewUrlParser: true } )
   });
 
 // define routes path
-app.use('/api/posts', posts);
+app.use('/api/blogs', routes);
 
 // Setup for heroku and local port 30001
 const port = process.env.PORT || 3001;

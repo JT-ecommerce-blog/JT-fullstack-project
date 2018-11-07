@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 
-import HeroBlog from '../Blogs/HeroBlog/HeroBlog';
-import BlogContent from '../Blogs//BlogContent';
+import HeroBlog from '../blogs/HeroBlog/HeroBlog';
+import BlogContent from '../blogs/BlogContent/BlogContent';
 
 class AboutUsPage extends Component {
   render() {

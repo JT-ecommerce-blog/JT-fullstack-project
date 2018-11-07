@@ -2,8 +2,9 @@ import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
 
-import HomePage from '.././homepage/Homepage.js';
-import AboutUsPage from '.././aboutus/AboutUsPage.js';
+import HomePage from '.././homepage/Homepage';
+import AboutUsPage from '.././aboutus/AboutUsPage';
+import MainBlogPage from '.././blogs/MainBlogPage';
 
 import SubNav from './SubNav.js';
 
@@ -22,7 +23,7 @@ const Home = () => (
 
 const Blog = () => (
   <div className="main-content">
-    <h3>This will be the blog page.</h3>
+    <MainBlogPage />
   </div>
 );
 
