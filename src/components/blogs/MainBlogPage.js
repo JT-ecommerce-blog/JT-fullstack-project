@@ -1,9 +1,27 @@
 import React, { Component } from 'react';
 
 class MainBlogPage extends Component {
+
+  constructor() {
+    super();
+    this.state = {
+      blogAuthor: '',
+      blogComment: '',
+      data: null
+    }
+  }
+
+  // componentDidMount() {
+  //   fetch('/api/posts')
+  //   .then(results => {
+  //     return results.json();
+  // }
+
   render() {
     return(
-      <h1>Main Blog Page Content</h1>
+      <div>
+        blog page content
+      </div>
     );
   }
 }

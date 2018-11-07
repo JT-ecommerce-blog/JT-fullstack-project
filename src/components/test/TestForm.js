@@ -25,7 +25,7 @@ class TestForm extends Component {
   //posting to database
   submitForm = async e => {
     e.preventDefault();
-    await fetch('/api/posts', {
+    await fetch('/api/blogs', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -36,7 +36,7 @@ class TestForm extends Component {
       }),
     });
     this.props.history.push('/');
-    }
+  }
   
 
   render() {
