@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { withRouter } from 'react-router-dom';
 
 class TestForm extends Component {
   constructor(props) {
@@ -10,10 +11,15 @@ class TestForm extends Component {
     this.onInputChange = this.onInputChange.bind(this);
   }
 
-  onInputChange(event) {
+  onInputChange(e) {
     this.setState ({
-      [event.target.name]: event.target.value
+      [e.target.name]: e.target.value
     });
+  }
+
+  routeRedirect(e) {
+    e.preventDefault();
+    this.props.history.push('/');
   }
 
   //posting to database
@@ -29,10 +35,13 @@ class TestForm extends Component {
         author: this.state.author
       }),
     });
-  }
+    this.props.history.push('/');
+    }
+  
 
   render() {
-    return <form>
+    return (
+      <form onSubmit={this.routeRedirect.bind(this)}>
         <div className="form">
           <label htmlFor="author">Author</label>
           <input value={this.state.author} onChange={this.onInputChange} type="text" id="author" name="author" />
@@ -42,12 +51,11 @@ class TestForm extends Component {
         <input value={this.state.comment} onChange={this.onInputChange} type="text" id="comment" name="comment" />
         </div>
         <div className="form">
-        <button type="submit" value="submit" onClick={this.submitForm}>
-            New Data
-          </button>
+        <button type="submit" onClick={this.submitForm}>New Data</button>
         </div>
-      </form>;
+      </form>
+    );
   }
 }
 
-export default TestForm;
+export default withRouter(TestForm);
