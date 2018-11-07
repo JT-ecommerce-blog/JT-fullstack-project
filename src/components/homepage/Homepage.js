@@ -6,6 +6,7 @@ import FeaturedBlog from './featuredBlogs/FeaturedBlogsContainer';
 import HomeBucketOne from './homeBucketOne/HomeBucketOneContainer';
 import HomeBucketTwo from './homeBucketTwo/HomeBucketTwoContainer';
 import ComingSoon from './comingSoon/ComingSoon';
+import TestForm from '.././test/TestForm';
 
 class HomePage extends Component {
   render() {
@@ -17,6 +18,7 @@ class HomePage extends Component {
         <HomeBucketOne />
         <HomeBucketTwo />
         <ComingSoon />
+        <TestForm />
       </div>
     );
   }

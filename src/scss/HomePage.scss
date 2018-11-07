@@ -182,8 +182,9 @@
     &:after {
       content: '';
       display: block;
-      width: 40%;
+      width: 20%;
       margin-top: 5px;
+      margin-left: 25px;
       border-bottom: 1px solid $courceLightOrange;
       text-align: center;
     }
