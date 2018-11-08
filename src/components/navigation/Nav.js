@@ -4,7 +4,7 @@ import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
 
 import HomePage from '.././homepage/Homepage';
 import AboutUsPage from '.././aboutus/AboutUsPage';
-import MainBlogPage from '.././blogs/MainBlogPage';
+import MainBlogPage from '.././Blogs/MainBlogPage';
 
 import SubNav from './SubNav.js';
 
