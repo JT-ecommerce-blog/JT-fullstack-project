@@ -28,7 +28,6 @@ mongoose.connect(db, { useNewUrlParser: true } )
 
 // define routes path
 app.use('/api/blogs', routes);
-
 // Setup for heroku and local port 30001
 const port = process.env.PORT || 3001;
 
