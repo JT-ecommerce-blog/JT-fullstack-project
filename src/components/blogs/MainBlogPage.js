@@ -11,7 +11,7 @@ class MainBlogPage extends Component {
       blogs: []
     }
   }
-
+  
   componentDidMount() {
     axios.get('http://localhost:3001/api/blogs')
       .then(res => {
