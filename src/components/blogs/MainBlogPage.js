@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import axios from 'axios';
 
 class MainBlogPage extends Component {
 
@@ -7,20 +8,35 @@ class MainBlogPage extends Component {
     this.state = {
       blogAuthor: '',
       blogComment: '',
-      data: null
+      blogs: []
     }
   }
 
-  // componentDidMount() {
-  //   fetch('/api/posts')
-  //   .then(results => {
-  //     return results.json();
-  // }
+  componentDidMount() {
+    axios.get('http://localhost:3001/api/blogs')
+      .then(res => {
+        const blogs = res.data
+        this.setState({ blogs })
+        console.log(this.state.blogs);
+      })
+      .catch(err => {
+        console.log(err);
+      });
+  }
 
   render() {
     return(
       <div>
-        blog page content
+        {
+          this.state.blogs.map((blogs, index) =>  {
+            return (
+              <div key={index}>
+                <h3>{blogs.author}</h3>
+                <p>{blogs.comment}</p>
+              </div> 
+            );
+          })
+        }
       </div>
     );
   }
