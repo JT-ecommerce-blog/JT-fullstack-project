@@ -33,6 +33,9 @@ class MainBlogPage extends Component {
               <div key={index}>
                 <h3>{blogs.author}</h3>
                 <p>{blogs.comment}</p>
+
+                <p>oiasdjfoisjafoisajdfoiasfjoiafj</p>
+                <p>asdoifjosaijfioasfjosidafjaoidsfj</p>
               </div> 
             );
           })
