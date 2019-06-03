@@ -1,7 +1,7 @@
 # The Cource
 Full stack application that houses a coding blog and discussion board.
 
-## Initial Github process
+## Contribution Guide - Initial Github process
 
 ### Step 1
 First thing first, fork the repo to your github account. 
